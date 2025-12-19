@@ -45,9 +45,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onEdit, onDelete }) 
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-6 border border-gray-200">
+    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 transform hover:-translate-y-1">
       {/* Project name and status */}
-      <div className="flex justify-between items-start mb-3">
+      <div className="flex justify-between items-start mb-4">
         <h3 className="text-lg font-bold text-gray-800 flex-1">{project.name}</h3>
         <span
           className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
@@ -75,16 +75,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onEdit, onDelete }) 
       </div>
 
       {/* Action buttons */}
-      <div className="flex space-x-2">
+      <div className="flex space-x-3">
         <button
           onClick={() => onEdit(project)}
-          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200"
+          className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-2.5 px-4 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
         >
           Edit
         </button>
         <button
           onClick={() => onDelete(project.id)}
-          className="flex-1 bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200"
+          className="flex-1 bg-red-600 hover:bg-red-700 text-white py-2.5 px-4 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
         >
           Delete
         </button>
