@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-2xl mx-auto">
-            Streamline your workflow, track progress, and deliver projects on time with our intuitive project management dashboard.
+            Streamline your workflow, track progress and deliver projects on time with our intuitive project management dashboard.
           </p>
 
           {/* CTA Button */}

@@ -167,9 +167,9 @@ const Dashboard: React.FC = () => {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-10">
+      <main className="container mx-auto px-6 py-8">
         {/* Dashboard Summary Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* Total Projects Card */}
           <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
             <div className="flex items-center justify-between">
@@ -232,7 +232,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Search and Filter Section */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-8 border border-gray-100">
+        <div className="bg-white rounded-lg shadow-md p-4 mb-6 border border-gray-100">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="search" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -244,7 +244,7 @@ const Dashboard: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by name or description..."
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
               />
             </div>
             <div>
@@ -255,7 +255,7 @@ const Dashboard: React.FC = () => {
                 id="filter"
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value as ProjectStatus | 'All')}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
               >
                 <option value="All">All Projects</option>
                 <option value="Pending">Pending</option>
@@ -264,8 +264,10 @@ const Dashboard: React.FC = () => {
               </select>
             </div>
           </div>
-          <div className="mt-4 text-sm text-gray-600">
-            Showing {filteredProjects.length} of {projects.length} projects
+          <div className="mt-3 pt-3 border-t border-gray-200">
+            <p className="text-xs text-gray-600 font-medium">
+              Showing <span className="text-purple-600 font-bold">{filteredProjects.length}</span> of <span className="font-bold">{projects.length}</span> projects
+            </p>
           </div>
         </div>
 

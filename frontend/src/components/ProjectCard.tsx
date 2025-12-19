@@ -45,7 +45,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onEdit, onDelete }) 
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 transform hover:-translate-y-1">
+    <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 transform hover:-translate-y-1 ${
+      isOverdue() ? 'border-2 border-red-500' : 'border border-gray-100'
+    }`}>
       {/* Project name and status */}
       <div className="flex justify-between items-start mb-4">
         <h3 className="text-lg font-bold text-gray-800 flex-1">{project.name}</h3>
